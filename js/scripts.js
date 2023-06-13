@@ -1,14 +1,14 @@
 // Business Logic
 
 function BankAccount() {
-this.initialEntry = {};
-this.currentId = 0;
-this.withdrawals = {};
-this.deposits = {};
+this.initialEntry = 0;
+this.balance = 0;
+this.withdrawals = 0;
+this.deposits = 0; 
 
 };
 
-BankAccount.prototype.addEntryDeposit = function(entry) {
+BankAccount.prototype.addEntryDeposit = function(initialEntry) {
     entry.id = this.assignId();
     this.initialEntry[entry.id] = entry;
 };
@@ -46,7 +46,7 @@ BankAccount.prototype.findWithdrawal = function(id) {
 //DEPOSIT
 BankAccount.prototype.addDeposit = function(deposit) {
   deposit.id = this.assignId();
-  this.Deposit[deposit.id] = deposit;
+  this.deposits[deposits.id] = deposit;
 };
 
 BankAccount.prototype.assignId = function() {
@@ -61,3 +61,62 @@ BankAccount.prototype.findDeposit = function(id) {
   return false;
 };
 
+// User Interface Logic
+
+let NewBankAccount = new BankAccount();
+
+
+    function handleNewBankAccount(e) {
+    e.preventDefault();
+    document.querySelector("form#bankAccount").removeAttribute("class");
+    document.querySelector("form#depositWithdrawal").removeAttribute("class");
+    document.querySelector("div#balance").removeAttribute("class");
+
+    let bankAccounts = document.querySelector("input#bankAccount");
+    let initialEntry = parseInt.document.querySelector("input#initialEntry");
+    document.querySelector("span#username").innerText= username;
+    let balance = NewBankAccount.addInitialEntry(initialEntry);
+    document.querySelector("span#totalBalance").innerText= initialEntry;
+    console.log(NewBankAccount);
+}
+
+    function handleDepositWithdrawals(e) {
+    e.preventDefault();
+    document.querySelector("span#name").innerText= null;
+    document.querySelector("span#totalBalance").innerText= null;
+    document.querySelector("span#minusBalance").innerText= null;
+
+    let entryIn = parseInt(document.querySelector("input#entry").value)
+    let outputOut = parseInt(document.querySelector("input#withdrawal").value)
+
+    }
+
+
+window.addEventListener("load", function (){
+  document.querySelector("form#bankAccount").addEventListener("submit", handleNewBankAccount);
+  document.querySelector("form#depositWithdrawal").addEventListener("submit", handleDepositWithdrawals);
+
+});
+
+
+
+
+/*function withdrawMoney (event) {
+let moneyWithdrawn = document.querySelector("input#Withdrawal");
+ if (bankAccount <= 0) {
+    return 0
+ }
+ console.log(balance - moneyWithdrawn)
+};*/
+
+BankAccount.prototype.withdraw = function(balance) {
+  if (balance > 0 && balance <= this.initialEntry) {
+  this.initialEntry -= balance;
+}
+};
+
+BankAccount.prototype.deposit = function(balance) {
+  if (balance > 0) {
+    this.initialEntry += balance;
+  }  
+};
