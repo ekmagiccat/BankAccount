@@ -1,10 +1,10 @@
 // Business Logic
 
 function BankAccount() {
-this.initialEntry = 0;
+this.initialEntry = {};
 this.currentId = 0;
-this.withdrawals = 0;
-this.deposits = 0;
+this.withdrawals = {};
+this.deposits = {};
 
 };
 
