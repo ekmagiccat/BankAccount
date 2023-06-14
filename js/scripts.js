@@ -27,7 +27,7 @@ BankAccount.prototype.removeWithdrawal = function(userWithdrawals) {
   if (userWithdrawals > 0){
     return this.withdrawals += userWithdrawals;
   }
-}
+};
 
 BankAccount.prototype.addDeposit = function(userDeposits) {
     if (userDeposits > 0){
@@ -91,15 +91,12 @@ let newBankAccount = new BankAccount();
   }
 
 
-
 window.addEventListener("load", function (){
   document.querySelector("form#bankAccount").addEventListener("submit", handleNewBankAccount);
   document.querySelector("form#depositWithdrawal").addEventListener("submit", handleDepositWithdrawals);
-
 });
 
-
-
+// window.location.reload(onclick)
 
 /*function withdrawMoney (event) {
 let moneyWithdrawn = document.querySelector("input#Withdrawal");
