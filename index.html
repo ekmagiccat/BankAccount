@@ -12,22 +12,22 @@
 <body>
     <h1>Welcome to Epicodus Bank</h1>
 
-<div class="container1">
+<div class="container">
  <form id="bankAccount">
     <h2> Register a new Account:</h2>
     <label for="bankAccount">Name:</label>
     <input type="text" id="username" name="username">
     <br>
     <br>
-    <label for="initialEntry">Initial entry:</label> 
-    <input type="number" id="initialEntry" name="initialEntry">
+    <label for="userInitialEntry">Initial entry:</label> 
+    <input type="number" id="userInitialEntry" name="userInitialEntry">
     <br>
     <br>
     <button type="submit" class="btn1">Submit</button>
     </form>
 </div>
 <br>
-<div class="container2">
+<div class="container">
     <form id="depositWithdrawal" class="hidden">
         <h2>Deposit or withdraw funds:</h2>
         <label for="deposits">Deposit:</label>
@@ -37,15 +37,16 @@
         <label for="withdrawal">Withdraw:</label>
         <input type="number" id="withdrawal" name="withdrawal">
         <br>
-        <button type="submit" class="btn2">Submit</button>
+        <button type="submit" id="btn2">Submit</button>
     </form>
 </div>
 <br>
-<div class="container3">
+<div class="container">
     <div id="balance" class="hidden">
-        <h3>Thank you for creating an account!<span id="name"></span></h3>
-        <h3>Current Balance: <span id="totalBalance"></span></h3>
+        <h3><span id="name"></span></h3>
+        <h3>Amount Deposited: <span id="totalDeposit"></span></h3>
         <h3>Amount Withdrawn:<span id="minusBalance"></span></h3>
+        <h3>Total Balance:<span id="totalBalance"></span></h3>
     </div>
 </div>
 
