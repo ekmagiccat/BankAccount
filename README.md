@@ -38,6 +38,8 @@ Test: "It should withdraw money from the bank account"
 Input: withdrawMoney (25);
 Expected Output: BankAccount (225);
 
+## License
+
 MIT License
 
 Copyright (c) _06/19/2023_ Eva Kemp & Pier Rodriguez
