@@ -1,6 +1,6 @@
 # Bank Account
 
-#### **By Eva Kemp**
+#### **By Eva Kemp & Pier Rodriguez**
 
 ## Technologies Used
 
